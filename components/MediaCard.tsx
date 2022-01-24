@@ -4,12 +4,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
+import { newLineTransform } from './InfoCard';
 
 interface MediaCardProps {
   title: string;
   imageURL: string;
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   variant?: 'elevation' | 'outlined';
+  text?: string;
 }
 
 const MediaCard: React.FC<MediaCardProps> = (props) => {
@@ -27,7 +29,7 @@ const MediaCard: React.FC<MediaCardProps> = (props) => {
             {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {props.children}
+            {props.text ? newLineTransform(props.text + '') : props.children}
           </Typography>
         </CardContent>
       </Stack>

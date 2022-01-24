@@ -12,7 +12,7 @@ interface TextCardProps {
   variant?: 'elevation' | 'outlined';
 }
 
-function newLineTransform(str: string) {
+export function newLineTransform(str: string) {
   let a = [],
     arr = str.split('\n');
   for (let i = 0; i < arr.length - 1; i++) {

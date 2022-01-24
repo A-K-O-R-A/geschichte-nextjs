@@ -4,10 +4,13 @@ import { Divider, Grid, Stack } from '@mui/material';
 import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
 
+import texts from '../public/texts';
+import MediaCard from '../components/MediaCard';
+
 const timeLineMap: string[] = [
   'Mitte 19. Jh. - Anfänge als Arbeiterbewegung',
   '1848/49 - Deutsche Revolution',
-  '1863 - Gründung ADAV #My_title_is_weird',
+  '1863 - Gründung ADAV #Test',
   '1869 - Gründung SDAP / Gewerbefreiheit',
   '1875 - Zusammenschluss zu SAPD',
   '1878 - Sozialistengesetz',
@@ -27,31 +30,23 @@ const Landing: NextPage = () => {
         <Grid item xs={14}>
           <h1>Soziale Frage</h1>
           <Stack spacing={4}>
-            {(() => {
-              let a = [];
-              for (let i = 0; i < 10; i++)
-                a.push(
-                  <InfoCard
-                    title={'My title is weird' + (i != 4 ? i : '')}
-                    subtitle="I have a cute subtitle"
-                    topic="But a weird topic"
-                    box={{ maxWidth: 500 }}
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Unde natus veniam consequatur facere nisi explicabo commodi
-                    dolor, nulla voluptates. Saepe corporis fugit est ipsa velit
-                    harum tempora nesciunt. Quos porro amet quod? Quaerat
-                    suscipit placeat similique ipsa, doloremque nesciunt
-                    laudantium earum facere sapiente aut, eveniet reprehenderit,
-                    provident libero sunt ut. Modi quaerat vero maiores eum
-                    asperiores odio qui, ipsa magnam nostrum dolorum iure
-                    repudiandae aliquam animi quam neque eaque impedit dolores
-                    odit dolorem obcaecati tenetur rem repellat sint assumenda?
-                    Odit?
-                  </InfoCard>
-                );
-              return a;
-            })()}
+            {texts.map((text) => (
+              <InfoCard {...text} variant="outlined" box={{ maxWidth: 500 }}>
+                {text.text}
+              </InfoCard>
+            ))}
+            <MediaCard
+              title="Pauperismus"
+              variant="outlined"
+              imageURL="https://www.hanisauland.de/sites/default/files/styles/article_1180/public/1779513-161311-2020-05/soziale-Frage-kinderarbeit-49823249.jpg.jpeg"
+            >
+              Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+              nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+              heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h eelll
+              nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+              heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+              nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahh
+            </MediaCard>
           </Stack>
         </Grid>
       </Grid>

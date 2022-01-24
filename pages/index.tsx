@@ -7,7 +7,7 @@ import InfoCard from '../components/InfoCard';
 const timeLineMap: string[] = [
   'Mitte 19. Jh. - Anfänge als Arbeiterbewegung',
   '1848/49 - Deutsche Revolution',
-  '1863 - Gründung ADAV-My_title_is_weird',
+  '1863 - Gründung ADAV #My_title_is_weird',
   '1869 - Gründung SDAP / Gewerbefreiheit',
   '1875 - Zusammenschluss zu SAPD',
   '1878 - Sozialistengesetz',

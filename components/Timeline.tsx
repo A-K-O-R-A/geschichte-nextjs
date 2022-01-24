@@ -17,29 +17,32 @@ interface TimelineProps {
 const TimelineComponent: React.FC<TimelineProps> = (props) => {
   return (
     <Timeline position={props.position ?? 'right'}>
-      {props.timeLineMap.map((k, i) => (
-        <TimelineItem key={i}>
-          <TimelineOppositeContent color="text.secondary">
-            {k.split('-')[0]}
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            {k.split('-')[2] ? (
-              <a
-                href={'/#' + k.split('-')[2]}
-                style={{ textDecoration: 'none', color: 'teal' }}
-              >
-                {k.split('-')[1]}
-              </a>
-            ) : (
-              k.split('-')[1]
-            )}
-          </TimelineContent>
-        </TimelineItem>
-      ))}
+      {props.timeLineMap.map((k, i) => {
+        const parts = k.split(/ ?[-#] ?/g);
+        return (
+          <TimelineItem key={i}>
+            <TimelineOppositeContent color="text.secondary">
+              {parts[0]}
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              {parts[2] ? (
+                <a
+                  href={'/#' + parts[2]}
+                  style={{ textDecoration: 'none', color: 'teal' }}
+                >
+                  {parts[1]}
+                </a>
+              ) : (
+                parts[1]
+              )}
+            </TimelineContent>
+          </TimelineItem>
+        );
+      })}
     </Timeline>
   );
 };

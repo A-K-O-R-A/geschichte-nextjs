@@ -14,7 +14,7 @@ interface MediaCardProps {
 
 const MediaCard: React.FC<MediaCardProps> = (props) => {
   return (
-    <Card sx={{ maxWidth: 345 }} variant={props.variant}>
+    <Card sx={{}} variant={props.variant}>
       <Stack direction={props.direction ?? 'column'}>
         <CardMedia
           component="img"

@@ -29,11 +29,11 @@ const Landing: NextPage = () => {
         </Grid>
         <Grid item xs={14}>
           <h1>Soziale Frage</h1>
-          <Grid container spacing={4}>
+          <Grid container spacing={4} columns={30}>
             {texts.map((text) => {
               if (text.imageURL) {
                 return (
-                  <Grid item xs>
+                  <Grid item xs={10}>
                     <MediaCard
                       {...text}
                       imageURL={text.imageURL + ''}
@@ -45,18 +45,16 @@ const Landing: NextPage = () => {
                 );
               } else
                 return (
-                  <Grid item xs>
+                  <Grid item xs={10}>
                     <InfoCard
                       {...text}
                       variant="outlined"
                       box={{ maxWidth: 500 }}
-                    >
-                      {text.text}
-                    </InfoCard>
+                    ></InfoCard>
                   </Grid>
                 );
             })}
-            <Grid item xs>
+            <Grid item xs={10}>
               <MediaCard
                 title="Pauperismus"
                 variant="outlined"

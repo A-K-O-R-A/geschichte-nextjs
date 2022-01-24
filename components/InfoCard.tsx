@@ -8,7 +8,19 @@ interface TextCardProps {
   topic?: string;
   title: string;
   subtitle?: string;
+  text?: string;
   variant?: 'elevation' | 'outlined';
+}
+
+function newLineTransform(str: string) {
+  let a = [],
+    arr = str.split('\n');
+  for (let i = 0; i < arr.length - 1; i++) {
+    a.push(<React.Fragment>{arr[i]}</React.Fragment>);
+    a.push(<br></br>);
+  }
+  a.push(<React.Fragment>{arr[arr.length - 1]}</React.Fragment>);
+  return a;
 }
 
 const TextCard: React.FC<TextCardProps> = (props) => {
@@ -27,7 +39,7 @@ const TextCard: React.FC<TextCardProps> = (props) => {
           {props.subtitle}
         </Typography>
         <Typography variant="body2" textAlign="justify">
-          {props.children}
+          {props.text ? newLineTransform(props.text + '') : props.children}
         </Typography>
       </CardContent>
     </Card>

@@ -29,25 +29,49 @@ const Landing: NextPage = () => {
         </Grid>
         <Grid item xs={14}>
           <h1>Soziale Frage</h1>
-          <Stack spacing={4}>
-            {texts.map((text) => (
-              <InfoCard {...text} variant="outlined" box={{ maxWidth: 500 }}>
-                {text.text}
-              </InfoCard>
-            ))}
-            <MediaCard
-              title="Pauperismus"
-              variant="outlined"
-              imageURL="https://www.hanisauland.de/sites/default/files/styles/article_1180/public/1779513-161311-2020-05/soziale-Frage-kinderarbeit-49823249.jpg.jpeg"
-            >
-              Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
-              nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
-              heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h eelll
-              nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
-              heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
-              nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahh
-            </MediaCard>
-          </Stack>
+          <Grid container spacing={4}>
+            {texts.map((text) => {
+              if (text.imageURL) {
+                return (
+                  <Grid item xs>
+                    <MediaCard
+                      {...text}
+                      imageURL={text.imageURL + ''}
+                      variant="outlined"
+                    >
+                      {text.text}
+                    </MediaCard>
+                  </Grid>
+                );
+              } else
+                return (
+                  <Grid item xs>
+                    <InfoCard
+                      {...text}
+                      variant="outlined"
+                      box={{ maxWidth: 500 }}
+                    >
+                      {text.text}
+                    </InfoCard>
+                  </Grid>
+                );
+            })}
+            <Grid item xs>
+              <MediaCard
+                title="Pauperismus"
+                variant="outlined"
+                imageURL="https://www.hanisauland.de/sites/default/files/styles/article_1180/public/1779513-161311-2020-05/soziale-Frage-kinderarbeit-49823249.jpg.jpeg"
+              >
+                Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h
+                eelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahh
+              </MediaCard>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </React.Fragment>

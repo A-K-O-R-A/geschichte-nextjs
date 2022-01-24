@@ -1,35 +1,33 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from '../src/Link';
-import ProTip from '../src/ProTip';
-import Copyright from '../src/Copyright';
+import { Divider, Grid } from '@mui/material';
+import TimelineComponent from '../components/timeline';
 
-const Home: NextPage = () => {
+const timeLineMap: {
+  [key: string]: string;
+} = {
+  Eat: '09:30 AM',
+  Code: '19:30 AM',
+  Sleep: '09:30 PM',
+  Repeat: '12:30 AM',
+};
+
+const Landing: NextPage = () => {
   return (
-    <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Typography variant="h4" component="h1" gutterBottom>
-          MUI v5 + Next.js with TypeScript example
-        </Typography>
-        <Link href="/about" color="secondary">
-          Go to the about page
-        </Link>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <React.Fragment>
+      <Grid container columns={20} spacing={6}>
+        <Grid item xs={4}>
+          <TimelineComponent timeLineMap={timeLineMap} />
+        </Grid>
+        <Grid item xs={0.5}>
+          <Divider orientation="vertical" />
+        </Grid>
+        <Grid item xs={15}>
+          asd
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 
-export default Home;
+export default Landing;

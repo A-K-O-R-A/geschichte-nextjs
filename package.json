@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-with-typescript",
+  "name": "geschichte",
   "version": "5.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,9 @@
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
+    "@mui/lab": "^5.0.0-alpha.66",
     "@mui/material": "latest",
+    "markdown-to-jsx": "^7.1.6",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

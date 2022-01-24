@@ -11,7 +11,7 @@ const timeLineMap: string[] = [
   '1848/49 - Deutsche Revolution',
   '1863 - Gründung ADAV #ADAV',
   '1869 - Gründung SDAP #SDAP',
-  '1875 - Zusammenschluss zu SAPD #Pauperismus',
+  '1875 - Zusammenschluss zu SAPD #SAPD',
   '1878 - Sozialistengesetz',
   '1890 - Sozialistengesetz aufgehoben',
 ];

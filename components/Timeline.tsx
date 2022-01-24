@@ -1,5 +1,4 @@
 import * as React from 'react';
-import type { NextPage } from 'next';
 import {
   Timeline,
   TimelineItem,
@@ -11,25 +10,34 @@ import {
 } from '@mui/lab';
 
 interface TimelineProps {
-  timeLineMap: {
-    [key: string]: string;
-  };
+  timeLineMap: string[];
   position?: 'left' | 'right' | 'alternate';
 }
 
 const TimelineComponent: React.FC<TimelineProps> = (props) => {
   return (
     <Timeline position={props.position ?? 'right'}>
-      {Object.keys(props.timeLineMap).map((k) => (
-        <TimelineItem key={k}>
+      {props.timeLineMap.map((k, i) => (
+        <TimelineItem key={i}>
           <TimelineOppositeContent color="text.secondary">
-            {k}
+            {k.split('-')[0]}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent> {props.timeLineMap[k]}</TimelineContent>
+          <TimelineContent>
+            {k.split('-')[2] ? (
+              <a
+                href={'/#' + k.split('-')[2]}
+                style={{ textDecoration: 'none', color: 'teal' }}
+              >
+                {k.split('-')[1]}
+              </a>
+            ) : (
+              k.split('-')[1]
+            )}
+          </TimelineContent>
         </TimelineItem>
       ))}
     </Timeline>

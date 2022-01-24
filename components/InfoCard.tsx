@@ -13,7 +13,7 @@ interface TextCardProps {
 
 const TextCard: React.FC<TextCardProps> = (props) => {
   return (
-    <Card variant={props.variant}>
+    <Card variant={props.variant} id={props.title.replace(/ +/g, '_')}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {props.topic}

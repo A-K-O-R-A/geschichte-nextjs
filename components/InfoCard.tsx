@@ -2,13 +2,19 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import { useLocation } from 'react-router';
 
 interface TextCardProps {
   topic?: string;
   title: string;
   subtitle?: string;
   text?: string;
+  id?: string;
+  imageURL?: string;
+  direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   variant?: 'elevation' | 'outlined';
 }
 
@@ -25,23 +31,40 @@ export function newLineTransform(str: string) {
 
 const TextCard: React.FC<TextCardProps> = (props) => {
   return (
-    <Card variant={props.variant} id={props.title.replace(/ +/g, '_')}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {props.topic}
-        </Typography>
+    <Card
+      variant={props.variant}
+      id={props.id ?? props.title.replace(/ +/g, '_')}
+    >
+      <Stack direction={props.direction ?? 'column'}>
+        {props.imageURL ? (
+          <CardMedia
+            component="img"
+            height="140"
+            image={props.imageURL}
+            alt="green iguana"
+          />
+        ) : undefined}
+        <CardContent>
+          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+            {props.topic}
+          </Typography>
 
-        <Typography variant="h5" component="div">
-          {props.title}
-        </Typography>
+          <Typography variant="h5" component="div">
+            {props.title}
+          </Typography>
 
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {props.subtitle}
-        </Typography>
-        <Typography variant="body2" textAlign="justify">
-          {props.text ? newLineTransform(props.text + '') : props.children}
-        </Typography>
-      </CardContent>
+          <Typography sx={{ mb: 1.5 }} color="text.secondary">
+            {props.subtitle}
+          </Typography>
+          <Typography
+            variant="body2"
+            textAlign="justify"
+            color="text.secondary"
+          >
+            {props.text ? newLineTransform(props.text + '') : props.children}
+          </Typography>
+        </CardContent>
+      </Stack>
     </Card>
   );
 };

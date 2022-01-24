@@ -5,14 +5,13 @@ import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
 
 import texts from '../public/texts';
-import MediaCard from '../components/MediaCard';
 
 const timeLineMap: string[] = [
   'Mitte 19. Jh. - Anfänge als Arbeiterbewegung',
   '1848/49 - Deutsche Revolution',
-  '1863 - Gründung ADAV #Test',
-  '1869 - Gründung SDAP / Gewerbefreiheit',
-  '1875 - Zusammenschluss zu SAPD',
+  '1863 - Gründung ADAV #ADAV',
+  '1869 - Gründung SDAP #SDAP',
+  '1875 - Zusammenschluss zu SAPD #Pauperismus',
   '1878 - Sozialistengesetz',
   '1890 - Sozialistengesetz aufgehoben',
 ];
@@ -30,32 +29,15 @@ const Landing: NextPage = () => {
         <Grid item xs={14}>
           <h1>Soziale Frage</h1>
           <Grid container spacing={4} columns={30}>
-            {texts.map((text) => {
-              if (text.imageURL) {
-                return (
-                  <Grid item xs={10}>
-                    <MediaCard
-                      {...text}
-                      imageURL={text.imageURL + ''}
-                      variant="outlined"
-                    >
-                      {text.text}
-                    </MediaCard>
-                  </Grid>
-                );
-              } else
-                return (
-                  <Grid item xs={10}>
-                    <InfoCard
-                      {...text}
-                      variant="outlined"
-                      box={{ maxWidth: 500 }}
-                    ></InfoCard>
-                  </Grid>
-                );
-            })}
+            {texts.map((text) => (
+              <Grid item xs={10}>
+                <InfoCard {...text} variant="outlined">
+                  {text.text}
+                </InfoCard>
+              </Grid>
+            ))}
             <Grid item xs={10}>
-              <MediaCard
+              <InfoCard
                 title="Pauperismus"
                 variant="outlined"
                 imageURL="https://www.hanisauland.de/sites/default/files/styles/article_1180/public/1779513-161311-2020-05/soziale-Frage-kinderarbeit-49823249.jpg.jpeg"
@@ -66,8 +48,32 @@ const Landing: NextPage = () => {
                 eelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
                 nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
                 heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahh Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h
+                eelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahh Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h
+                eelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahh Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h
+                eelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahh Oh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh h
+                eelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
+                nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh
+                heelll nahhOh heelll nahhOh heelll nahhOh heelll nahhOh heelll
                 nahh
-              </MediaCard>
+              </InfoCard>
             </Grid>
           </Grid>
         </Grid>

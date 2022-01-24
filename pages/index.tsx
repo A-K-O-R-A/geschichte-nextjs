@@ -7,13 +7,13 @@ import InfoCard from '../components/InfoCard';
 const timeLineMap: {
   [key: string]: string;
 } = {
-  'Anfänge als Arbeiterbewegung': 'Mitte 19. Jh.',
-  'Deutsche Revolution': '1848/49',
-  ADAV: '1863',
-  SDAP: '1869',
-  'Zusammenschluss zu SAPD': '1875',
-  Sozialistengesetz: '1878',
-  'Sozialistengesetz aufgehoben': '1890',
+  'Mitte 19. Jh.': 'Anfänge als Arbeiterbewegung',
+  '1848/49': 'Deutsche Revolution',
+  '1863': 'ADAV',
+  '1869': 'SDAP',
+  '1875': 'Zusammenschluss zu SAPD',
+  '1878': 'Sozialistengesetz',
+  '1890': 'Sozialistengesetz aufgehoben',
 };
 
 const Landing: NextPage = () => {

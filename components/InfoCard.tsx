@@ -121,7 +121,7 @@ const TextCard: React.FC<TextCardProps> = (props) => {
             image={props.imageURL}
             alt="Ferdinand"
             style={{
-              width: '200px',
+              width: props.id === 'a' ? '300px' : '200px',
               maxWidth: '100%',
               maxHeight: '100%',
             }}

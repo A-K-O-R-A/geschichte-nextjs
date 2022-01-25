@@ -8,13 +8,15 @@ export default [
   },
   {
     id: 'a',
-    size: '21',
+    size: 21,
     imageURL: '/Familie.jpg',
-    text: 'Durch die starken wirtschaftlichen und sozialen Veränderungen in Folge der Industriellen Revolution kam es zu einem enormen Bevölkerungswachstum im 19. Jahrhundert. Trotz der mitwachsenden Wirtschaft resultierten daraus ein Überangebot an Arbeitskräften. Demzufolge waren die Löhne weit unter dem was nötig war um eine Familie zu ernähren. Um trotzdem zu überleben waren auch Frauen und Kinder gezwungen zu arbeiten, was wieder in zu vielen Arbeitskräften und noch geringeren Löhnen endete. Zudem mussten die Arbeiter unter unmenschlichen Arbeitsbedingungen arbeiten. Man war immer einer übermäßigen Belastung ausgesetzt, musste 16 bis 18 Stunden pro Tag arbeiten und das sechs Tage pro Woche ohne Urlaub. Lediglich die Sonn- und Feiertage waren frei. Es herrschten des weiteren unglaublich schlechte Wohnverhältnisse. Durch die daraus entstehenden Krankheiten litten vor allem Kinder. Bis zum ersten Weltkrieg war die Arbeiterschaft die größte soziale Gruppe. Trotz ihrer schieren Masse hatten sie absolut kein politisches Mitbestimmungsrecht.\nUm die Lebensumstände der Arbeiterschaft zu verbessern gab es mehrere Lösungsansätze. Einer davon war die Sozialdemokratie, welche von den betroffenen Arbeitern selbst ausging und auf das erreichen von politischem Einfluss basierte.',
+    direction: 'row-reverse',
+    text: 'Durch die starken wirtschaftlichen und sozialen Veränderungen in Folge der Industriellen Revolution kam es zu einem enormen Bevölkerungswachstum im 19. Jahrhundert. Trotz der mitwachsenden Wirtschaft resultierten daraus ein Überangebot an Arbeitskräften. Demzufolge waren die Löhne weit unter dem was nötig war um eine Familie zu ernähren. Um trotzdem zu überleben waren auch Frauen und Kinder gezwungen zu arbeiten, was wieder in zu vielen Arbeitskräften und noch geringeren Löhnen endete. Zudem mussten die Arbeiter unter unmenschlichen Arbeitsbedingungen arbeiten. Man war immer einer übermäßigen Belastung ausgesetzt, musste 16 bis 18 Stunden pro Tag arbeiten und das sechs Tage pro Woche ohne Urlaub. Lediglich die Sonn- und Feiertage waren frei. Es herrschten des weiteren unglaublich schlechte Wohnverhältnisse. Durch die daraus entstehenden Krankheiten litten vor allem Kinder. Bis zum ersten Weltkrieg war die Arbeiterschaft die größte soziale Gruppe. Trotz ihrer schieren Masse hatten sie absolut kein politisches Mitbestimmungsrecht.',
   },
   {
-    id: 'Familie',
-    imageURL: '/Familie.jpg',
+    id: 'a',
+    size: 21,
+    text: 'Um die Lebensumstände der Arbeiterschaft zu verbessern gab es mehrere Lösungsansätze. Einer davon war die Sozialdemokratie, welche von den betroffenen Arbeitern selbst ausging und auf das erreichen von politischem Einfluss basierte.',
   },
   {
     title: 'Der Beginn der Sozialdemokratie – Die Arbeitervereine',

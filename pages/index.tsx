@@ -25,7 +25,7 @@ const timeLineMap: string[] = [
   '1875 - Zusammenschluss zu SAPD #SAPD',
   '1878 - Bismarcks Reaktion / Sozialistengesetz',
   '1890 - Aufhebung Sozialistengesetz',
-  '1890 - Gründung SDP #SPD',
+  '1890 - Gründung SPD #SPD',
 ];
 
 const Landing: NextPage = () => {

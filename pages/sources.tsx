@@ -14,9 +14,8 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
-import LinkIcon from '@mui/icons-material/Link';
 
-const sources = [
+const imageSources = [
   {
     name: 'Ferdinand Lassalle',
     iconURL: '/Ferdinand4.jpg',
@@ -37,6 +36,29 @@ const sources = [
     sourceURL:
       'https://sites.google.com/site/geschichte9arsd/industrielle-revolution/wohnverhaeltnisse-im-19-jahrhundert',
   },
+  {
+    name: 'Meilenstein Sozialdemokratie',
+    iconURL: '/Meilenstein.jpg',
+    source: 'www.spd-leverkusen.de',
+    sourceURL: 'https://www.spd-leverkusen.de/meilensteine-1863-1890/',
+  },
+];
+
+const textSources = [
+  {
+    name: 'Lehrbuch',
+    iconURL:
+      'https://fonts.gstatic.com/s/i/materialiconsoutlined/menu_book/v12/24px.svg',
+    source: 'Buchners Kolleg - Geschichte 11',
+    sourceURL: '',
+  },
+  {
+    name: 'AbiWissen Lösung Soziale Frage',
+    iconURL:
+      'https://fonts.gstatic.com/s/i/materialiconsoutlined/menu_book/v12/24px.svg',
+    source: 'AbiWissen Lösung Soziale Frage',
+    sourceURL: '',
+  },
 ];
 
 const About: NextPage = () => {
@@ -52,13 +74,13 @@ const About: NextPage = () => {
         }}
         height={'100%'}
       >
-        <Typography variant="h2" component="h2" gutterBottom>
-          Quellen
+        <Typography variant="h2" component="h2" mt={5}>
+          Bildquellen
         </Typography>
         <List
           sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
         >
-          {sources.map((s) => (
+          {imageSources.map((s) => (
             <React.Fragment>
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
@@ -81,7 +103,36 @@ const About: NextPage = () => {
             </React.Fragment>
           ))}
         </List>
-        <Box maxWidth="sm" height={60}>
+        <Typography variant="h2" component="h2" mt={10}>
+          Textquellen
+        </Typography>
+        <List
+          sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+        >
+          {textSources.map((s) => (
+            <React.Fragment>
+              <ListItem alignItems="flex-start">
+                <ListItemAvatar>
+                  <Avatar alt={s.name} src={s.iconURL} />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={s.name}
+                  secondary={
+                    <Typography
+                      component="a"
+                      href={s.sourceURL}
+                      style={{ color: 'teal' }}
+                    >
+                      {s.source}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <Divider variant="inset" component="li" />
+            </React.Fragment>
+          ))}
+        </List>
+        <Box maxWidth="sm" height={60} mt={5}>
           <Button variant="outlined" component={Link} noLinkStyle href="/">
             Zurück
           </Button>

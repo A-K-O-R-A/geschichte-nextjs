@@ -117,6 +117,8 @@ export default [
   {
     id: 'b',
     text: 'Trotz der langen und schweren Entwicklung der Sozialdemokratie im Deutschen Reich durch immer wiederkehrende Unterdrückungen und Verbote schafften es die sozialdemokratischen Parteien und Vereine einige ihrer Ziele zu verwirklichen. Dazu gehören zum Beispiel die soziale Kranken-, Unfall- und Rentenversicherung, ein allgemeines Wahlrecht oder der 8-Stunden-Tag. Somit hatten sie einen durchaus bemerkenswerten Einfluss auf die Lösung der Sozialen Frage und sind auch heute noch in der deutschen Politik durchaus präsent.',
-    size: 21,
+    size: 15,
+    imageURL: '/Meilenstein.jpg',
+    direction: 'row',
   },
 ] as TextCardProps[];

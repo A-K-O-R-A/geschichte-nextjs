@@ -48,7 +48,7 @@ const Landing: NextPage = () => {
       </Grid>
       <Grid item xs={7.29}>
         <h1>Soziale Frage</h1>
-        <Grid container spacing={4} columns={27}>
+        <Grid container spacing={4} columns={27} mb={10}>
           {texts.map((text) => {
             if (text.divider) return;
             <Grid item xs={10}>

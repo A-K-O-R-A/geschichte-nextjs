@@ -40,7 +40,7 @@ export default [
   {
     title: 'Ferdinand Lassalle',
     text: 'Er war Sohn eines jüdischen Kaufmanns in Breslau und war sowohl Philosoph, als auch Journalist und Politiker. Er akzeptierte den preußischen Staat und war Überzeugt die Soziale Frage durch Reformen lösen zu können. (Lebte 1825 - 1864)',
-    imageURL: '/Ferdinand3.jpg',
+    imageURL: '/Ferdinand4.jpg',
     direction: 'row-reverse',
     size: 21,
   },
@@ -84,13 +84,13 @@ export default [
   {
     title: 'Die Sozialdemokratische Partei Deutschlands (SPD)',
     id: 'SPD',
-    size: 9.5,
+    size: 9,
     text: 'Nachdem Otto von Bismarck 1890 entlassen und damit einhergehend sein Sozialistengesetz abgeschafft wurde gründete sich die SAPD als Sozialdemokratische Partei Deutschlands (SPD) in Halle neu.',
   },
 
   {
     title: 'Entwicklung bis 1918',
-    size: 11.5,
+    size: 12,
     text: 'Bis zum Ende des Deutschen Kaiserreichs 1918 erfreute sich die SPD immer weiter steigender Unterstützung. Ihre Anhängerzahl stieg stetig an, während sie bei den Reichstagswahlen 1890 mit 20% der Stimmen schon von 35 Abgeordnete im Parlament vertreten wurden, wurden sie schon 1912 mit 34,8% der Stimmen und 110 Abgeordneten die am meisten vertretene Partei im Reichstag. Die Position als stärkste Partei behielten sie auch bis zum Ende des Kaiserreichs bei.',
   },
   {

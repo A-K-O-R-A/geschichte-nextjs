@@ -99,7 +99,16 @@ const TextCard: React.FC<TextCardProps> = (props) => {
     <Card variant={props.variant}>
       <Stack direction={props.direction ?? 'column'}>
         {props.imageURL ? (
-          <CardMedia component="img" image={props.imageURL} alt="Ferdinand" />
+          <CardMedia
+            component="img"
+            image={props.imageURL}
+            alt="Ferdinand"
+            style={{
+              width: '200px',
+              maxWidth: '100%',
+              maxHeight: '100%',
+            }}
+          />
         ) : undefined}
         <CardContent>
           {(() => {

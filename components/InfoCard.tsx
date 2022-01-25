@@ -18,6 +18,7 @@ export interface TextCardProps {
   text?: string;
   size?: number;
   id?: string;
+  divider?: boolean;
   imageURL?: string;
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
   variant?: 'elevation' | 'outlined';
@@ -95,15 +96,10 @@ const TextCard: React.FC<TextCardProps> = (props) => {
   }
 
   return (
-    <Card variant={props.variant} onFocus={() => alert('a')}>
+    <Card variant={props.variant} >
       <Stack direction={props.direction ?? 'column'}>
         {props.imageURL ? (
-          <CardMedia
-            component="img"
-            height="140"
-            image={props.imageURL}
-            alt="green iguana"
-          />
+          <CardMedia component="img" image={props.imageURL} alt="Ferdinand" />
         ) : undefined}
         <CardContent>
           {(() => {

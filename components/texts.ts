@@ -36,12 +36,13 @@ export default [
     size: 10,
     text: 'Eine weitere wichtige Vereinigung war die Sozialdemokratische Arbeiterpartei (SDAP), welche 1869 von  Wilhelm Liebknecht und August Bebel gegründet wurde. Sie war vor allem in Süd- und Mitteldeutschland vertreten war im Gegensatz zum ADAV strikt Antipreußisch und demokratischer orientiert. Die Partei setzte vor allem auf den Marxismus und wollte die Soziale Frage durch Revolutionen bewältigen.',
   },
+
   {
     title: 'Ferdinand Lassalle',
     text: 'Er war Sohn eines jüdischen Kaufmanns in Breslau und war sowohl Philosoph, als auch Journalist und Politiker. Er akzeptierte den preußischen Staat und war Überzeugt die Soziale Frage durch Reformen lösen zu können. (Lebte 1825 - 1864)',
-    imageURL:
-      'https://upload.wikimedia.org/wikipedia/commons/f/f5/%D0%A4%D0%B5%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D0%BD%D0%B4_%D0%9B%D0%B0%D1%81%D1%81%D0%B0%D0%BB%D1%8C.jpg',
-    size: 8,
+    imageURL: '/Ferdinand2.jpg',
+    direction: 'column',
+    size: 6.5,
   },
   {
     title: 'Zusammenschluss zur SAPD',
@@ -55,7 +56,7 @@ export default [
     size: 11.2,
   },
   {
-    title: 'ab 1878 - Bismarcks Reaktion auf die sozialistischen Parteien',
+    title: 'Ab 1878 - Bismarcks Reaktion auf die sozialistischen Parteien',
     id: '1878',
     size: 30,
   },

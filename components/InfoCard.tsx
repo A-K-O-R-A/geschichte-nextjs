@@ -9,13 +9,14 @@ import Stack from '@mui/material/Stack';
 import tooltips from './tooltips';
 import Tooltip from '@mui/material/Tooltip';
 import { EmotionJSX } from '@emotion/react/types/jsx-namespace';
-import { Button, Container, Fade } from '@mui/material';
+import { Fade, Grid } from '@mui/material';
 
-interface TextCardProps {
+export interface TextCardProps {
   topic?: string;
   title: string;
-  subtitle?: string;
+  date?: string;
   text?: string;
+  size?: number;
   id?: string;
   imageURL?: string;
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
@@ -33,7 +34,7 @@ console.log(tooltipRegExp);
 function addTooltips(str: string) {
   if (!tooltipRegExp.test(str))
     //No Tooltip found
-    return <React.Fragment>{str}baaa</React.Fragment>;
+    return <React.Fragment>{str}</React.Fragment>;
 
   tooltipRegExp.test(str);
   let parts = str.split(tooltipRegExp),
@@ -83,10 +84,7 @@ export function textTransform(str: string) {
 
 const TextCard: React.FC<TextCardProps> = (props) => {
   return (
-    <Card
-      variant={props.variant}
-      id={props.id ?? props.title.replace(/ +/g, '_')}
-    >
+    <Card variant={props.variant} onFocus={() => alert('a')}>
       <Stack direction={props.direction ?? 'column'}>
         {props.imageURL ? (
           <CardMedia
@@ -97,17 +95,46 @@ const TextCard: React.FC<TextCardProps> = (props) => {
           />
         ) : undefined}
         <CardContent>
-          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            {props.topic}
-          </Typography>
+          {(() => {
+            if (props.topic || props.date)
+              return (
+                <Grid container columns={10} spacing={0}>
+                  <Grid item xs={7}>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      color="text.secondary"
+                      gutterBottom
+                    >
+                      {props.topic}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Typography
+                      sx={{ mb: 1.5 }}
+                      color="text.secondary"
+                      textAlign="right"
+                    >
+                      {props.date}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              );
 
-          <Typography variant="h5" component="div">
+            return <React.Fragment></React.Fragment>;
+          })()}
+          <Typography
+            id={props.id ?? props.title.replace(/ +/g, '_')}
+            variant="h5"
+            component="div"
+          >
             {props.title}
           </Typography>
-
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            {props.subtitle}
-          </Typography>
+          <Typography
+            sx={{ mb: 1.5 }}
+            color="text.secondary"
+            textAlign="right"
+            id="spacing"
+          ></Typography>
           <Typography
             variant="body2"
             textAlign="justify"

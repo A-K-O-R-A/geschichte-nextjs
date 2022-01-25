@@ -29,9 +29,8 @@ const tooltipRegExp = new RegExp(
     .join('|'),
   'gi'
 );
-console.log(tooltipRegExp);
 
-function addTooltips(str: string) {
+function adddTooltips(str: string) {
   if (!tooltipRegExp.test(str))
     //No Tooltip found
     return <React.Fragment>{str}</React.Fragment>;
@@ -68,6 +67,10 @@ function addTooltips(str: string) {
   return elements;
 }
 
+function addTooltips(str: string) {
+  return str;
+}
+
 export function textTransform(str: string) {
   let a = [],
     arr = str.split('\n');
@@ -83,6 +86,14 @@ export function textTransform(str: string) {
 }
 
 const TextCard: React.FC<TextCardProps> = (props) => {
+  if (!props.text) {
+    return (
+      <React.Fragment>
+        <h2>{props.title}</h2>
+      </React.Fragment>
+    );
+  }
+
   return (
     <Card variant={props.variant} onFocus={() => alert('a')}>
       <Stack direction={props.direction ?? 'column'}>
@@ -129,19 +140,30 @@ const TextCard: React.FC<TextCardProps> = (props) => {
           >
             {props.title}
           </Typography>
-          <Typography
-            sx={{ mb: 1.5 }}
-            color="text.secondary"
-            textAlign="right"
-            id="spacing"
-          ></Typography>
-          <Typography
-            variant="body2"
-            textAlign="justify"
-            color="text.secondary"
-          >
-            {props.text ? textTransform(props.text + '') : props.children}
-          </Typography>
+
+          {(() => {
+            let elm = props.text
+              ? textTransform(props.text + '')
+              : props.children;
+            if (elm)
+              return (
+                <React.Fragment>
+                  <Typography
+                    sx={{ mb: 1.5 }}
+                    color="text.secondary"
+                    textAlign="right"
+                    id="spacing"
+                  ></Typography>
+                  <Typography
+                    variant="body2"
+                    textAlign="justify"
+                    color="text.secondary"
+                  >
+                    {elm}
+                  </Typography>
+                </React.Fragment>
+              );
+          })()}
         </CardContent>
       </Stack>
     </Card>

@@ -12,7 +12,7 @@ export default [
     title: 'Der  Allgemeine Deutsche Arbeiterverein (ADAV)',
     date: '1863',
     id: 'ADAV',
-    size: 11.5,
+    size: 11,
     text: 'Durch die Lockerungen des Koalitionsverbots ab Anfang der 1860er Jahre kam es wiederholt zu Bildung von Arbeitervereinen. Besonders wichtig war hier der Allgemeine Deutsche Arbeiterverein (ADAV), welcher 1863 von Ferdinand Lassalle gegründet wurde. Der Verein war dem preußischem Staat gut gesinnt und wollte die Soziale Frage auf eine friedliche Art durch Reformen lösen. Dabei sollte die staatliche Grundordnung beibehalten werden, allerdings war ein allgemeines, gleiches, direktes und geheimes Wahlrecht unabdingbar um politischen Einfluss der Vereinigung zu ermöglichen.',
   },
   {
@@ -20,8 +20,12 @@ export default [
     title: 'Die Sozialdemokratische Arbeiterpartei (SDAP)',
     date: '1869',
     id: 'SDAP',
-    size: 8.5,
+    size: 9,
     text: 'Eine weitere wichtige Vereinigung war die Sozialdemokratische Arbeiterpartei (SDAP), welche 1869 von  Wilhelm Liebknecht und August Bebel gegründet wurde. Sie war vor allem in Süd- und Mitteldeutschland vertreten war im Gegensatz zum ADAV strikt Antipreußisch und demokratischer orientiert. Die Partei setzte vor allem auf den Marxismus und wollte die Soziale Frage durch Revolutionen bewältigen.',
+  },
+  {
+    title: 'Ferdinand Lassalle',
+    text: 'Er war Sohn eines jüdischen Kaufmanns in Breslau und war sowohl Philosoph, als auch Journalist und Politiker. Er akzeptierte den preußischen Staat und war Überzeugt die Soziale Frage durch Reformen lösen zu können. (Lebte 1825 - 1864)',
   },
   {
     topic: 'Arbeiterpartei',
@@ -33,13 +37,46 @@ export default [
     title: 'Forderungen der SADP',
     text: '• die Erreichung der sozialistischen Gesellschaft ohne Gewalt\n• allgemeines, gleiches, direktes und geheimes Wahlrecht für alle deutschen ab 20 Jahren\n• unbeschränktes Koalitionsrecht\n• direkte Gesetzgebung, Entscheidung über Krieg und Frieden und Rechtsprechung durch das Volk\n• eine Volkswehr anstelle des Heeres\n• eine allgemeine, kostenlose Schulpflicht\n• die Abschaffung aller Gesetze, die politische Tätigkeiten der Arbeiter einschränken',
   },
-
+  {
+    title: '1878 - Bismarcks Reaktion auf die sozialistischen Parteien',
+    text: '',
+    size: 20,
+  },
   {
     title: 'Das Sozialistengesetz',
-    text: 'Trotz der eindeutig gewaltfreien Einstellung der SADP wurde diese vom Staat als Bedrohung eingestuft. Auch das Besitzbürgertum sah die Sozialdemokratie vor allem als Bedrohung ihres Besitzstandes. Als Versuch die aufstrebenden Parteien zu unterdrücken erließ Reichskanzler Otto von Bismarck 1878 das Sozialistengesetz. Dieses verbot sozialistische, sozialdemokratische und kommunistische Vereine, Versammlungen und Schriften, welche eine Bedrohung für die bestehende Gesellschaftsordnung darstellen könnten. In Folge dessen löste sich die SADP wieder auf, beziehungsweise verschob sich in den Untergrund und ins Ausland.',
+    size: 11.5,
+    text: 'Trotz der eindeutig gewaltfreien Einstellung der SAPD wurde diese vom Staat als Bedrohung eingestuft. Auch das Besitzbürgertum sah die Sozialdemokratie vor allem als Bedrohung ihres Besitzstandes. Als Versuch die aufstrebenden Parteien zu unterdrücken erließ Reichskanzler Otto von Bismarck 1878 das Sozialistengesetz. Dieses verbot sozialistische, sozialdemokratische und kommunistische Vereine, Versammlungen und Schriften, welche eine Bedrohung für die bestehende Gesellschaftsordnung darstellen könnten. In Folge dessen löste sich die SAPD wieder auf, beziehungsweise verschob sich in den Untergrund und ins Ausland.',
   },
   {
     title: 'Die Sozialgesetzgebungen',
-    text: 'Um den sozialistischen Parteien ihre Anhänger abzunehmen erließ Bismarck außerdem staatliche Sozialgesetzgebungen. So entstand 1883 eine soziale Krankenversicherung, 1884 eine soziale Unfallversicherung und später eine Rentenversicherung. ',
+    size: 8.5,
+    text: 'Um den sozialistischen Parteien ihre Anhänger abzunehmen erließ Bismarck außerdem staatliche Sozialgesetzgebungen. So entstand 1883 eine soziale Krankenversicherung, 1884 eine soziale Unfallversicherung und später eine Rentenversicherung. Da allerdings die Sozialdemokraten für diese Gesetzgebungen verantwortlich gemacht wurden und so mehr Unterstützung bekamen, bewirkte Bismarck das genaue Gegenteil seiner Ziele.',
+  },
+  {
+    title: 'Nach 1890 - Neugründung der sozialdemokratischen Parteien',
+    size: 20,
+  },
+  {
+    topic: 'Arbeiterpartei',
+    title: 'Die Sozialdemokratische Partei Deutschlands (SPD)',
+    id: 'SPD',
+    date: '1890',
+    size: 13,
+    text: 'Nachdem Otto von Bismarck 1890 entlassen und damit einhergehend sein Sozialistengesetz abgeschafft wurde gründete sich die SAPD als Sozialdemokratische Partei Deutschlands (SPD) in Halle neu.',
+  },
+  {
+    title: 'Forderungen der SPD',
+    size: 7,
+    text: '• Vergesellschaftung von Produktionsmitteln\n• der 8-Stunden-Tag\n• Verbot von Kinderarbeit\n• das Koalitionsrecht\n',
+  },
+  {
+    title: 'Probleme innerhalb der Partei',
+    size: 11,
+    text: 'Aufgrund der widersprüchlichen Hauptmeinungen in der Partei drohte diese schnell wieder zu zerbrechen. Zum einen wollten die Anhänger der Lassalle’schen sich endgültig vom revolutionären Marxismus abwenden und eine nach außen eindeutige Reformpartei werden. Im Gegensatz dazu klammerten die Anhänger des Marxismus weiter an ihrer Einstellung. August Bebel schaffte schlussendlich einen Kompromiss zwischen den zwei Seiten, indem die Partei zwar ihr marxistischen Züge weiter vertrat, durch Koalitionen mit anderen Parteien aber auch die Reformziele erreicht werden konnten.',
+  },
+  {
+    title: 'Entwicklung bis 1918',
+    size: 9,
+    text: 'Bis zum Ende des Deutschen Kaiserreichs 1918 erfreute sich die SPD immer weiter steigender Unterstützung. Ihre Anhängerzahl stieg stetig an, während sie bei den Reichstagswahlen 1890 mit 20% der Stimmen schon von 35 Abgeordnete im Parlament vertreten wurden, wurden sie schon 1912 mit 34,8% der Stimmen und 110 Abgeordneten die am meisten vertretene Partei im Reichstag. Die Position als stärkste Partei behielten sie auch bis zum Ende des Kaiserreichs bei.',
   },
 ] as TextCardProps[];

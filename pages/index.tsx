@@ -1,6 +1,14 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import { Divider, Grid, Box, useTheme, IconButton, Stack } from '@mui/material';
+import {
+  Divider,
+  Grid,
+  Box,
+  useTheme,
+  IconButton,
+  Stack,
+  Container,
+} from '@mui/material';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
@@ -17,6 +25,7 @@ const timeLineMap: string[] = [
   '1875 - Zusammenschluss zu SAPD #SAPD',
   '1878 - Sozialistengesetz',
   '1890 - Sozialistengesetz aufgehoben',
+  '1890 - Gründung SDP #SPD',
 ];
 
 const Landing: NextPage = () => {
@@ -41,18 +50,15 @@ const Landing: NextPage = () => {
               <InfoCard {...text} variant="outlined" />
             </Grid>
           ))}
-          <Grid item xs={10}></Grid>
         </Grid>
       </Grid>
       <Grid item xs={0.01}>
         <Divider orientation="vertical" />
       </Grid>
-      <Grid item xs={1.5} mt={3}>
-        <Grid container>
+      <Grid item xs={1.5} mt={61}>
+        <Grid container rowGap={63}>
           {Object.keys(tooltips).map((t) => (
-            <Grid item>
-              <InfoCard title={t} text={tooltips[t]} variant="outlined" />
-            </Grid>
+            <InfoCard title={t} text={tooltips[t]} variant="outlined" />
           ))}
         </Grid>
       </Grid>

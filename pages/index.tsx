@@ -24,24 +24,16 @@ const Landing: NextPage = () => {
   const colorMode = React.useContext(ColorModeContext);
 
   return (
-    <Grid container columns={20} spacing={6}>
-      <Grid item xs={5}>
+    <Grid container columns={10.07} spacing={3}>
+      <Grid item xs={2.2}>
         <Stack direction="column">
           <TimelineComponent timeLineMap={timeLineMap} />
-          <Divider orientation="horizontal" />
-          <Grid container ml={3} mt={3}>
-            {Object.keys(tooltips).map((t) => (
-              <Grid item>
-                <InfoCard title={t} text={tooltips[t]} variant="outlined" />
-              </Grid>
-            ))}
-          </Grid>
         </Stack>
       </Grid>
-      <Grid item xs={0.5}>
+      <Grid item xs={0.01}>
         <Divider orientation="vertical" />
       </Grid>
-      <Grid item xs={14}>
+      <Grid item xs={6}>
         <h1>Soziale Frage</h1>
         <Grid container spacing={4} columns={20}>
           {texts.map((text) => (
@@ -50,6 +42,18 @@ const Landing: NextPage = () => {
             </Grid>
           ))}
           <Grid item xs={10}></Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={0.01}>
+        <Divider orientation="vertical" />
+      </Grid>
+      <Grid item xs={1.5} mt={3}>
+        <Grid container>
+          {Object.keys(tooltips).map((t) => (
+            <Grid item>
+              <InfoCard title={t} text={tooltips[t]} variant="outlined" />
+            </Grid>
+          ))}
         </Grid>
       </Grid>
     </Grid>

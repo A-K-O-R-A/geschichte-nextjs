@@ -86,7 +86,7 @@ export function textTransform(str: string) {
 }
 
 const TextCard: React.FC<TextCardProps> = (props) => {
-  if (!props.text) {
+  if (!props.text && props.title) {
     return (
       <React.Fragment>
         <h2>{props.title}</h2>

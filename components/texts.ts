@@ -88,4 +88,13 @@ export default [
     size: 6.5,
     text: '• Vergesellschaftung von Produktionsmitteln\n• der 8-Stunden-Tag\n• Verbot von Kinderarbeit\n• das Koalitionsrecht\n',
   },
+  {
+    title: 'Erfolge der sozialdemokratischen Bewegung',
+    size: 30,
+  },
+  {
+    title: '',
+    text: 'Trotz der langen und schweren Entwicklung der Sozialdemokratie im Deutschen Reich durch immer wiederkehrende Unterdrückungen und Verbote schafften es die sozialdemokratischen Parteien und Vereine einige ihrer Ziele zu verwirklichen. Dazu gehören zum Beispiel die soziale Kranken-, Unfall- und Rentenversicherung, ein allgemeines Wahlrecht oder der 8-Stunden-Tag. Somit hatten sie einen durchaus bemerkenswerten Einfluss auf die Lösung der Sozialen Frage und sind auch heute noch in der deutschen Politik durchaus Present.',
+    size: 21,
+  },
 ] as TextCardProps[];

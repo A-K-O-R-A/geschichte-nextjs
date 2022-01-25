@@ -1,25 +1,17 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import {
-  Divider,
-  Grid,
-  Box,
-  useTheme,
-  IconButton,
-  Stack,
-  Container,
-} from '@mui/material';
-import { Brightness4, Brightness7 } from '@mui/icons-material';
+import { Divider, Grid, useTheme, Stack } from '@mui/material';
 import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
 
 import texts from '../components/texts';
 import { ColorModeContext } from './_app';
-import tooltips from '../components/tooltips';
 
 const timeLineMap: string[] = [
   'Mitte 19. Jh. - Anfänge als Arbeiterbewegung',
+  '1848 - Allgemeine Deutsche Arbeiterverbrüderung',
   '1848/49 - Deutsche Revolution',
+  '1862 - Bismarck ist preußischer Ministerpräsident',
   '1863 - Gründung ADAV #ADAV',
   '1869 - Gründung SDAP #SDAP',
   '1875 - Zusammenschluss zu SAPD #SAPD',

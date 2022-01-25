@@ -1,10 +1,12 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import { Divider, Grid, Stack } from '@mui/material';
+import { Divider, Grid, Box, useTheme, IconButton } from '@mui/material';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
 
-import texts from '../public/texts';
+import texts from '../components/texts';
+import { ColorModeContext } from './_app';
 
 const timeLineMap: string[] = [
   'Mitte 19. Jh. - Anfänge als Arbeiterbewegung',
@@ -17,6 +19,9 @@ const timeLineMap: string[] = [
 ];
 
 const Landing: NextPage = () => {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
+
   return (
     <React.Fragment>
       <Grid container columns={20} spacing={6}>
@@ -27,7 +32,38 @@ const Landing: NextPage = () => {
           <Divider orientation="vertical" />
         </Grid>
         <Grid item xs={14}>
-          <h1>Soziale Frage</h1>
+          <Grid container>
+            <Grid item>
+              <h1>Soziale Frage</h1>
+            </Grid>
+            <Grid item>
+              <Box
+                sx={{
+                  display: 'flex',
+                  width: '100%',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bgcolor: 'background.default',
+                  color: 'text.primary',
+                  borderRadius: 1,
+                  p: 3,
+                }}
+              >
+                {theme.palette.mode} mode
+                <IconButton
+                  sx={{ ml: 1 }}
+                  onClick={colorMode.toggleColorMode}
+                  color="inherit"
+                >
+                  {theme.palette.mode === 'dark' ? (
+                    <Brightness7 />
+                  ) : (
+                    <Brightness4 />
+                  )}
+                </IconButton>
+              </Box>
+            </Grid>
+          </Grid>
           <Grid container spacing={4} columns={30}>
             {texts.map((text) => (
               <Grid item xs={text.size ?? 10}>

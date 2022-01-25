@@ -1,6 +1,3 @@
-/**
- * @type {{topic?: string;title: string;subtitle?: string;text:string;id?: string;size?: number; imageURL?: string;}[]}
- */
 export default [
   {
     title: 'Der Beginn der Sozialdemokratie – Die Arbeitervereine',
@@ -35,4 +32,12 @@ export default [
     title: 'Die Sozialgesetzgebungen',
     text: 'Um den sozialistischen Parteien ihre Anhänger abzunehmen erließ Bismarck außerdem staatliche Sozialgesetzgebungen. So entstand 1883 eine soziale Krankenversicherung, 1884 eine soziale Unfallversicherung und später eine Rentenversicherung. ',
   },
-];
+] as {
+  topic?: string;
+  title: string;
+  subtitle?: string;
+  text: string;
+  id?: string;
+  size?: number;
+  imageURL?: string;
+}[];

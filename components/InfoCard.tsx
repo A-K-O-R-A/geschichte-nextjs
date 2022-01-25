@@ -6,9 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
-import tooltips from '../public/tooltips';
+import tooltips from './tooltips';
 import Tooltip from '@mui/material/Tooltip';
-import { Button } from '@mui/material';
+import { EmotionJSX } from '@emotion/react/types/jsx-namespace';
+import { Button, Container, Fade } from '@mui/material';
 
 interface TextCardProps {
   topic?: string;
@@ -22,32 +23,48 @@ interface TextCardProps {
 }
 
 const tooltipRegExp = new RegExp(
-  tooltips.map((t) => `(${t.keyword})`).join('|'),
+  Object.keys(tooltips)
+    .map((t) => `(${t})`)
+    .join('|'),
   'gi'
 );
 console.log(tooltipRegExp);
 
 function addTooltips(str: string) {
-  let a = [],
-    arr = str.split(tooltipRegExp),
-    matches = tooltipRegExp.exec(str);
-  console.log(arr);
-  console.log(matches);
-  if (matches === null) return <React.Fragment>{str}b</React.Fragment>;
-str.search
-  for (let i = 0; i < matches.length - 1; i++) {
-    let text = arr[i],
-      tipTitle = matches[i],
-      tag = <React.Fragment>{tipTitle}aaa</React.Fragment>;
+  if (!tooltipRegExp.test(str))
+    //No Tooltip found
+    return <React.Fragment>{str}baaa</React.Fragment>;
 
-    console.log(text, tipTitle);
+  tooltipRegExp.test(str);
+  let parts = str.split(tooltipRegExp),
+    elements: EmotionJSX.Element[] = [];
 
-    a.push(text);
-    a.push(tag);
-  }
-  a.push(<React.Fragment>{arr[arr.length - 1]}</React.Fragment>);
-  console.log(a);
-  return a;
+  let matches = tooltipRegExp.exec(str) as RegExpExecArray,
+    i = 0;
+  do {
+    let tipTitle = matches[0],
+      tipContent = tooltips[tipTitle];
+    console.log(
+      `Found ${tipTitle}. Next starts at ${tooltipRegExp.lastIndex}.`
+    );
+    elements.push(<React.Fragment>{parts[i]}</React.Fragment>);
+    elements.push(
+      <Tooltip
+        title={tipContent}
+        TransitionComponent={Fade}
+        TransitionProps={{ timeout: 600 }}
+      >
+        <a style={{ color: 'teal' }}>{tipTitle}</a>
+      </Tooltip>
+    );
+
+    //Prepare next
+    matches = tooltipRegExp.exec(str) as RegExpExecArray;
+    i++;
+  } while (matches !== null);
+  elements.push(<React.Fragment>{parts[i + 1]}</React.Fragment>);
+
+  return elements;
 }
 
 export function textTransform(str: string) {

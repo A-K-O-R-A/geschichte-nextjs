@@ -18,7 +18,7 @@ import {
 const sources = [
   {
     name: 'Ferdinand Lassalle',
-    iconURL: '/Ferdinand2.jpg',
+    iconURL: '/Ferdinand4.jpg',
     source: 'Wikipedia Commons',
     sourceURL:
       'https://commons.wikimedia.org/wiki/File:%D0%A4%D0%B5%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D0%BD%D0%B4_%D0%9B%D0%B0%D1%81%D1%81%D0%B0%D0%BB%D1%8C.jpg',
@@ -30,10 +30,11 @@ const sources = [
     sourceURL: 'https://commons.wikimedia.org/wiki/File:BismarckLandtag.jpg',
   },
   {
-    name: 'Otto von Bismarck',
+    name: 'Deutsche Revolution',
     iconURL: '/Bismarck2.jpg',
-    source: 'Wikipedia Commons',
-    sourceURL: 'https://commons.wikimedia.org/wiki/File:BismarckLandtag.jpg',
+    source:
+      'Bild einer Arbeiterwohnung im 19. Jahrhundert, aus: Asmus, Gesine (Hrsg.): Hinterhof, Keller und Mansarde-Einblicke in Berliner Wohnungselend 1901-1920, Reinbek 1982, S. 111.',
+    sourceURL: 'http://grial4.usal.es/MIH/urbanAndRuralDev/activities.html',
   },
 ];
 

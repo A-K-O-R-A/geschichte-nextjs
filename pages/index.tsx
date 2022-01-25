@@ -1,6 +1,13 @@
 import * as React from 'react';
 import type { NextPage } from 'next';
-import { Divider, Grid, useTheme, Stack, Drawer } from '@mui/material';
+import {
+  Divider,
+  Grid,
+  useTheme,
+  Button,
+  Drawer,
+  Typography,
+} from '@mui/material';
 import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
 
@@ -12,7 +19,7 @@ const timeLineMap: string[] = [
   'Mitte 19. Jh. - Anfänge als Arbeiterbewegung / Arbeiterverein',
   '1848 - Allgemeine Deutsche Arbeiterverbrüderung',
   '1848/49 - Deutsche Revolution',
-  '1862 - Bismarck ist preußischer Ministerpräsident',
+  '1862 - Bismarck preußischer Ministerpräsident',
   '1860er Jahre - Erste Parteien',
   '1863 - Gründung ADAV #ADAV',
   '1869 - Gründung SDAP #SDAP',
@@ -41,6 +48,11 @@ const Landing: NextPage = () => {
           open
         >
           <TimelineComponent timeLineMap={timeLineMap} />
+          <Button href="/sources">
+            <Typography color="text.secondary" align="center">
+              Quellen
+            </Typography>
+          </Button>
         </Drawer>
       </Grid>
       <Grid item xs={0.01}>

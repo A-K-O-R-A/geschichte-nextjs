@@ -25,7 +25,7 @@ export default [
   {
     id: 'Arbeitervereine',
     size: 21,
-    text: 'Die Sozialdemokratie hatte ihr Anfänge als Arbeiterbewegung in der Mitte des 19. Jahrhunderts. Es bildeten sich kleinere Arbeitervereine, deren Ziel es war die Lebensumstände der Mitglieder zu verbessern. Allerdings war ihre Wirkung stark lokal begrenzt und sie hatten zusätzlich große Probleme durch das offizielle Verbot politischer Vereine in den deutschen Staaten.\nErst zu Deutschen Revolution 1848/49 kam es zu ersten größeren Zusammenschlüssen. So bildete sich im September 1848 die „Allgemeine Deutsche Arbeiterverbrüderung“ aus etwa 30 kleineren Arbeitervereinen.',
+    text: 'Die Sozialdemokratie hatte ihr Anfänge als Arbeiterbewegung in der Mitte des 19. Jahrhunderts. Es bildeten sich kleinere Arbeitervereine, deren Ziel es war die Lebensumstände der Mitglieder zu verbessern. Allerdings war ihre Wirkung stark lokal begrenzt und sie hatten zusätzlich große Probleme durch das offizielle Verbot politischer Vereine in den deutschen Staaten.\nErst zu Deutschen Revolution 1848/49 kam es zu ersten größeren Zusammenschlüssen. So bildete sich im September 1848 die „Allgemeine Deutsche Arbeiterverbrüderung“ aus etwa 30 kleineren Arbeitervereinen.\n\nForderungen:\n• einen parlamentarisch-demokratischen Staat und damit einhergehend ein allgemeines Wahl- und Koalitionsrecht\n• Produktions- und Konsumgenossenschaften\n• Gesundheitspflegevereine, Krankenunterstützungs- und Sterbekassen\nBesonders das allgemeine Wahlrecht ist eine wichtige und für den Erfolg der Sozialdemokratie unerlässliche Forderung.\n\nDurch das Scheitern der Revolution im Juli 1849 nahmen die ersten Versuche der Arbeiterbewegung wieder ein Ende, vor allem, da sämtliche Arbeitervereine und andere politische Vereinigungen komplett verboten wurden. Bis zum Anfang der 60er Jahre gab es so kaum Hoffnung auf Verbesserung der Situation für Arbeiter.',
   },
   {
     title: 'Anfang 1860er Jahre – eine neue Aussicht auf Besserung',
@@ -116,7 +116,7 @@ export default [
   },
   {
     id: 'b',
-    text: 'Trotz der langen und schweren Entwicklung der Sozialdemokratie im Deutschen Reich durch immer wiederkehrende Unterdrückungen und Verbote schafften es die sozialdemokratischen Parteien und Vereine einige ihrer Ziele zu verwirklichen. Dazu gehören zum Beispiel die soziale Kranken-, Unfall- und Rentenversicherung, ein allgemeines Wahlrecht oder der 8-Stunden-Tag. Somit hatten sie einen durchaus bemerkenswerten Einfluss auf die Lösung der Sozialen Frage und sind auch heute noch in der deutschen Politik durchaus Present.',
+    text: 'Trotz der langen und schweren Entwicklung der Sozialdemokratie im Deutschen Reich durch immer wiederkehrende Unterdrückungen und Verbote schafften es die sozialdemokratischen Parteien und Vereine einige ihrer Ziele zu verwirklichen. Dazu gehören zum Beispiel die soziale Kranken-, Unfall- und Rentenversicherung, ein allgemeines Wahlrecht oder der 8-Stunden-Tag. Somit hatten sie einen durchaus bemerkenswerten Einfluss auf die Lösung der Sozialen Frage und sind auch heute noch in der deutschen Politik durchaus präsent.',
     size: 21,
   },
 ] as TextCardProps[];

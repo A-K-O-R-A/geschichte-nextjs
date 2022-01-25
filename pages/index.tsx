@@ -12,7 +12,6 @@ import TimelineComponent from '../components/Timeline';
 import InfoCard from '../components/InfoCard';
 
 import texts from '../components/texts';
-import { ColorModeContext } from './_app';
 
 const timeLineMap: string[] = [
   'Erste Hälfte 19. Jh - Sozialen Frage',
@@ -29,9 +28,6 @@ const timeLineMap: string[] = [
 ];
 
 const Landing: NextPage = () => {
-  const theme = useTheme();
-  const colorMode = React.useContext(ColorModeContext);
-
   return (
     <Grid container columns={10.2} spacing={3} className="flex-section">
       <Grid item xs={2.7}>
@@ -57,8 +53,8 @@ const Landing: NextPage = () => {
       <Grid item xs={0.01}>
         <Divider orientation="vertical" />
       </Grid>
-      <Grid item xs={7.29}>
-        <h1>Soziale Frage</h1>
+      <Grid item xs={7.29} mt={2}>
+        <Typography variant="h3">Soziale Frage</Typography>
         <Grid container spacing={4} columns={27} mb={10}>
           {texts.map((text) => {
             if (text.divider) return;

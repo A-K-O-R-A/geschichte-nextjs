@@ -33,7 +33,7 @@ const Landing: NextPage = () => {
   const colorMode = React.useContext(ColorModeContext);
 
   return (
-    <Grid container columns={10.07} spacing={3}>
+    <Grid container columns={10.2} spacing={3}>
       <Grid item xs={2.2}>
         <Stack direction="column">
           <TimelineComponent timeLineMap={timeLineMap} />
@@ -42,23 +42,13 @@ const Landing: NextPage = () => {
       <Grid item xs={0.01}>
         <Divider orientation="vertical" />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={7.8}>
         <h1>Soziale Frage</h1>
-        <Grid container spacing={4} columns={20}>
+        <Grid container spacing={4} columns={30}>
           {texts.map((text) => (
             <Grid item xs={text.size ?? 10}>
               <InfoCard {...text} variant="outlined" />
             </Grid>
-          ))}
-        </Grid>
-      </Grid>
-      <Grid item xs={0.01}>
-        <Divider orientation="vertical" />
-      </Grid>
-      <Grid item xs={1.5} mt={61}>
-        <Grid container rowGap={63}>
-          {Object.keys(tooltips).map((t) => (
-            <InfoCard title={t} text={tooltips[t]} variant="outlined" />
           ))}
         </Grid>
       </Grid>

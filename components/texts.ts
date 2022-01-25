@@ -18,7 +18,7 @@ export default [
   {
     id: 'Arbeitervereine',
     size: 21,
-    text: 'Die Sozialdemokratie hatte ihr Anfänge als Arbeiterbewegung in der Mitte des 19. Jahrhunderts. Es bildeten sich kleinere Arbeitervereine, deren Ziel es war die Lebensumstände der Mitglieder zu verbessern. Allerdings war ihre Wirkung stark lokal begrenzt und sie hatten zusätzlich große Probleme durch das offizielle Verbot politischer Vereine in den deutschen Staaten.\n    Erst zu Deutschen Revolution 1848/49 kam es zu ersten größeren Zusammenschlüssen. So bildete sich im September 1848 die „Allgemeine Deutsche Arbeiterverbrüderung“ aus etwa 30 kleineren Arbeitervereinen.\n\nForderungen:\n• einen parlamentarisch-demokratischen Staat und damit einhergehend ein allgemeines Wahl- und Koalitionsrecht\n• Produktions- und Konsumgenossenschaften\n• Gesundheitspflegevereine, Krankenunterstützungs- und Sterbekassen\n\nBesonders das allgemeine Wahlrecht ist eine wichtige und für den Erfolg der Sozialdemokratie unerlässliche Forderung. Durch das Scheitern der Revolution im Juli 1849 nahmen die ersten Versuche der Arbeiterbewegung wieder ein Ende, vor allem, da sämtliche Arbeitervereine und andere politische Vereinigungen komplett verboten wurden. Bis zum Anfang der 60er Jahre gab es so kaum Hoffnung auf Verbesserung der Situation für Arbeiter.',
+    text: 'Die Sozialdemokratie hatte ihr Anfänge als Arbeiterbewegung in der Mitte des 19. Jahrhunderts. Es bildeten sich kleinere Arbeitervereine, deren Ziel es war die Lebensumstände der Mitglieder zu verbessern. Allerdings war ihre Wirkung stark lokal begrenzt und sie hatten zusätzlich große Probleme durch das offizielle Verbot politischer Vereine in den deutschen Staaten.\nErst zu Deutschen Revolution 1848/49 kam es zu ersten größeren Zusammenschlüssen. So bildete sich im September 1848 die „Allgemeine Deutsche Arbeiterverbrüderung“ aus etwa 30 kleineren Arbeitervereinen.',
   },
   {
     title: 'Anfang 1860er Jahre – eine neue Aussicht auf Besserung',
@@ -27,22 +27,22 @@ export default [
   {
     title: 'Der  Allgemeine Deutsche Arbeiterverein (ADAV)',
     id: 'ADAV',
-    size: 11,
+    size: 12,
     text: 'Durch die Lockerungen des Koalitionsverbots ab Anfang der 1860er Jahre kam es wiederholt zu Bildung von Arbeitervereinen. Besonders wichtig war hier der Allgemeine Deutsche Arbeiterverein (ADAV), welcher 1863 von Ferdinand Lassalle gegründet wurde. Der Verein war dem preußischem Staat gut gesinnt und wollte die Soziale Frage auf eine friedliche Art durch Reformen lösen. Dabei sollte die staatliche Grundordnung beibehalten werden, allerdings war ein allgemeines, gleiches, direktes und geheimes Wahlrecht unabdingbar um politischen Einfluss der Vereinigung zu ermöglichen.',
   },
   {
     title: 'Die Sozialdemokratische Arbeiterpartei (SDAP)',
     id: 'SDAP',
-    size: 10,
+    size: 9,
     text: 'Eine weitere wichtige Vereinigung war die Sozialdemokratische Arbeiterpartei (SDAP), welche 1869 von  Wilhelm Liebknecht und August Bebel gegründet wurde. Sie war vor allem in Süd- und Mitteldeutschland vertreten war im Gegensatz zum ADAV strikt Antipreußisch und demokratischer orientiert. Die Partei setzte vor allem auf den Marxismus und wollte die Soziale Frage durch Revolutionen bewältigen.',
   },
 
   {
     title: 'Ferdinand Lassalle',
     text: 'Er war Sohn eines jüdischen Kaufmanns in Breslau und war sowohl Philosoph, als auch Journalist und Politiker. Er akzeptierte den preußischen Staat und war Überzeugt die Soziale Frage durch Reformen lösen zu können. (Lebte 1825 - 1864)',
-    imageURL: '/Ferdinand2.jpg',
-    direction: 'column',
-    size: 6.5,
+    imageURL: '/Ferdinand3.jpg',
+    direction: 'row-reverse',
+    size: 21,
   },
   {
     title: 'Zusammenschluss zur SAPD',
@@ -72,8 +72,10 @@ export default [
   },
   {
     title: 'Otto von Bismarck',
+    imageURL: '/Bismarck2.jpg',
+    direction: 'row-reverse',
     text: 'Er war von  1862 bis 1890 preußischer Ministerpräsident und von 1871 bis 1890 zusätzlich deutscher Reichskanzler. Trotz seiner konservativen und gegenüber den Sozialdemokraten feindliche Einstellung führte er zum Beispiel das Sozialversicherungssystem ein. 1890 wird er aufgrund von Meinungsverschiedenheiten mit dem seit 1888 amtierenden Kaiser Wilhelm II. entlassen. (Lebte 1815-1898)',
-    size: 8,
+    size: 21,
   },
   {
     title: 'Nach 1890 - Neugründung der sozialdemokratischen Parteien',
@@ -93,12 +95,12 @@ export default [
   },
   {
     title: 'Probleme innerhalb der Partei',
-    size: 16.5,
+    size: 13,
     text: 'Aufgrund der widersprüchlichen Hauptmeinungen in der Partei drohte diese schnell wieder zu zerbrechen. Zum einen wollten die Anhänger der Lassalle’schen sich endgültig vom revolutionären Marxismus abwenden und eine nach außen eindeutige Reformpartei werden. Im Gegensatz dazu klammerten die Anhänger des Marxismus weiter an ihrer Einstellung. August Bebel schaffte schlussendlich einen Kompromiss zwischen den zwei Seiten, indem die Partei zwar ihr marxistischen Züge weiter vertrat, durch Koalitionen mit anderen Parteien aber auch die Reformziele erreicht werden konnten.',
   },
   {
     title: 'Forderungen der SPD',
-    size: 4.5,
+    size: 8,
     text: '• Vergesellschaftung von Produktionsmitteln\n• der 8-Stunden-Tag\n• Verbot von Kinderarbeit\n• das Koalitionsrecht\n',
   },
   {

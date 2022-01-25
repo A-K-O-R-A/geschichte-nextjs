@@ -25,11 +25,21 @@ const TimelineComponent: React.FC<TimelineProps> = (props) => {
               {parts[0]}
             </TimelineOppositeContent>
             <TimelineSeparator>
-              <TimelineDot />
-              <TimelineConnector />
+              <TimelineDot variant="outlined" />
+              {i < props.timeLineMap.length - 1 ? (
+                <TimelineConnector />
+              ) : undefined}
             </TimelineSeparator>
-            <TimelineContent>
-              {parts[2] ? (
+            <TimelineContent>{parts[1]}</TimelineContent>
+          </TimelineItem>
+        );
+      })}
+    </Timeline>
+  );
+};
+
+/**
+ {parts[2] ? (
                 <a
                   href={'/#' + parts[2]}
                   style={{ textDecoration: 'none', color: 'teal' }}
@@ -39,12 +49,6 @@ const TimelineComponent: React.FC<TimelineProps> = (props) => {
               ) : (
                 parts[1]
               )}
-            </TimelineContent>
-          </TimelineItem>
-        );
-      })}
-    </Timeline>
-  );
-};
+ */
 
 export default TimelineComponent;

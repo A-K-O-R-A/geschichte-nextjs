@@ -20,7 +20,6 @@ const timeLineMap: string[] = [
   '1848 - Allgemeine Deutsche Arbeiterverbrüderung',
   '1848/49 - Deutsche Revolution',
   '1862 - Bismarck preußischer Ministerpräsident',
-  '1860er Jahre - Erste Parteien',
   '1863 - Gründung ADAV #ADAV',
   '1869 - Gründung SDAP #SDAP',
   '1875 - Zusammenschluss zu SAPD #SAPD',

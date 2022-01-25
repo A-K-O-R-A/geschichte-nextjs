@@ -14,6 +14,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from '@mui/material';
+import LinkIcon from '@mui/icons-material/Link';
 
 const sources = [
   {
@@ -30,11 +31,11 @@ const sources = [
     sourceURL: 'https://commons.wikimedia.org/wiki/File:BismarckLandtag.jpg',
   },
   {
-    name: 'Deutsche Revolution',
-    iconURL: '/Bismarck2.jpg',
-    source:
-      'Bild einer Arbeiterwohnung im 19. Jahrhundert, aus: Asmus, Gesine (Hrsg.): Hinterhof, Keller und Mansarde-Einblicke in Berliner Wohnungselend 1901-1920, Reinbek 1982, S. 111.',
-    sourceURL: 'http://grial4.usal.es/MIH/urbanAndRuralDev/activities.html',
+    name: 'Familie in Einzimmerwohnung',
+    iconURL: '/Familie.jpg',
+    source: 'Google Sites',
+    sourceURL:
+      'https://sites.google.com/site/geschichte9arsd/industrielle-revolution/wohnverhaeltnisse-im-19-jahrhundert',
   },
 ];
 
@@ -66,9 +67,13 @@ const About: NextPage = () => {
                 <ListItemText
                   primary={s.name}
                   secondary={
-                    <React.Fragment>
-                      <a href={s.sourceURL}>{s.source}</a>
-                    </React.Fragment>
+                    <Typography
+                      component="a"
+                      href={s.sourceURL}
+                      style={{ color: 'teal' }}
+                    >
+                      {s.source}
+                    </Typography>
                   }
                 />
               </ListItem>

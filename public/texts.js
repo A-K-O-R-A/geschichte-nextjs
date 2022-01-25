@@ -1,7 +1,13 @@
 /**
- * @type {{topic?: string;title: string;subtitle?: string;text:string;id?: string; imageURL?: string;}[]}
+ * @type {{topic?: string;title: string;subtitle?: string;text:string;id?: string;size?: number; imageURL?: string;}[]}
  */
 export default [
+  {
+    title: 'Der Beginn der Sozialdemokratie – Die Arbeitervereine',
+    id: 'Arbeitervereine',
+    size: 20,
+    text: 'Die Sozialdemokratie hatte ihr Anfänge als Arbeiterbewegung in der Mitte des 19. Jahrhunderts. Es bildeten sich kleinere Arbeitervereine, deren Ziel es war die Lebensumstände der Mitglieder zu verbessern. Allerdings war ihre Wirkung stark lokal begrenzt und sie hatten zusätzlich große Probleme durch das offizielle Verbot politischer Vereine in den deutschen Staaten.\n    Erst zu Deutschen Revolution 1848/49 kam es zu ersten größeren Zusammenschlüssen. So bildete sich im September 1848 die „Allgemeine Deutsche Arbeiterverbrüderung“ aus etwa 30 kleineren Arbeitervereinen.\n\nForderungen:\n• einen parlamentarisch-demokratischen Staat und damit einhergehend ein allgemeines Wahl- und Koalitionsrecht\n• Produktions- und Konsumgenossenschaften\n• Gesundheitspflegevereine, Krankenunterstützungs- und Sterbekassen\n\nBesonders das allgemeine Wahlrecht ist eine wichtige und für den Erfolg der Sozialdemokratie unerlässliche Forderung.\n\nDurch das Scheitern der Revolution im Juli 1849 nahmen die ersten Versuche der Arbeiterbewegung wieder ein Ende, vor allem, da sämtliche Arbeitervereine und andere politische Vereinigungen komplett verboten wurden. Bis zum Anfang der 60er Jahre gab es so kaum Hoffnung auf Verbesserung der Situation für Arbeiter.',
+  },
   {
     title: 'Der  Allgemeine Deutsche Arbeiterverein',
     id: 'ADAV',

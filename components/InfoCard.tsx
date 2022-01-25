@@ -5,7 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import { useLocation } from 'react-router';
+
+import tooltips from '../public/tooltips';
+import Tooltip from '@mui/material/Tooltip';
+import { Button } from '@mui/material';
 
 interface TextCardProps {
   topic?: string;
@@ -18,14 +21,46 @@ interface TextCardProps {
   variant?: 'elevation' | 'outlined';
 }
 
-export function newLineTransform(str: string) {
+const tooltipRegExp = new RegExp(
+  tooltips.map((t) => `(${t.keyword})`).join('|'),
+  'gi'
+);
+console.log(tooltipRegExp);
+
+function addTooltips(str: string) {
+  let a = [],
+    arr = str.split(tooltipRegExp),
+    matches = tooltipRegExp.exec(str);
+  console.log(arr);
+  console.log(matches);
+  if (matches === null) return <React.Fragment>{str}b</React.Fragment>;
+str.search
+  for (let i = 0; i < matches.length - 1; i++) {
+    let text = arr[i],
+      tipTitle = matches[i],
+      tag = <React.Fragment>{tipTitle}aaa</React.Fragment>;
+
+    console.log(text, tipTitle);
+
+    a.push(text);
+    a.push(tag);
+  }
+  a.push(<React.Fragment>{arr[arr.length - 1]}</React.Fragment>);
+  console.log(a);
+  return a;
+}
+
+export function textTransform(str: string) {
   let a = [],
     arr = str.split('\n');
   for (let i = 0; i < arr.length - 1; i++) {
-    a.push(<React.Fragment>{arr[i]}</React.Fragment>);
+    let text = addTooltips(arr[i]),
+      tag = <React.Fragment>{text}</React.Fragment>;
+
+    a.push(tag);
     a.push(<br></br>);
   }
-  a.push(<React.Fragment>{arr[arr.length - 1]}</React.Fragment>);
+  a.push(<React.Fragment>{addTooltips(arr[arr.length - 1])}</React.Fragment>);
   return a;
 }
 
@@ -61,7 +96,7 @@ const TextCard: React.FC<TextCardProps> = (props) => {
             textAlign="justify"
             color="text.secondary"
           >
-            {props.text ? newLineTransform(props.text + '') : props.children}
+            {props.text ? textTransform(props.text + '') : props.children}
           </Typography>
         </CardContent>
       </Stack>

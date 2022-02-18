@@ -19,6 +19,7 @@
     "@mui/material": "latest",
     "markdown-to-jsx": "^7.1.6",
     "next": "latest",
+    "node-fetch": "^3.2.0",
     "react": "latest",
     "react-dom": "latest"
   },

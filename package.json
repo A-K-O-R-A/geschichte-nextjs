@@ -16,7 +16,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/lab": "^5.0.0-alpha.66",
-    "@mui/material": "latest",
+    "@mui/material": "5.4.3",
     "markdown-to-jsx": "^7.1.6",
     "next": "latest",
     "node-fetch": "^3.2.0",

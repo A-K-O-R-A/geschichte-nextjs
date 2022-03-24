@@ -14,7 +14,7 @@
     "@emotion/react": "11.8.1",
     "@emotion/server": "latest",
     "@emotion/styled": "11.8.1",
-    "@mui/icons-material": "latest",
+    "@mui/icons-material": "5.4.4",
     "@mui/lab": "^5.0.0-alpha.66",
     "@mui/material": "5.4.3",
     "markdown-to-jsx": "^7.1.6",
